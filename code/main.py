@@ -26,13 +26,13 @@ class Game:
 
     def player(self):
             self.paddle=Player(SIZE['paddle'],
-                               POS['player'],
+                               POS['player'],   
                                COLORS['paddle'],
                                (self.all_sprites,
                                 self.paddle_sprites))
 
     def ball(self):
-            self.ball=Ball(
+            self.ball=Ball(self.paddle_sprites,
                            (self.all_sprites))
 
     def run(self):
